@@ -4,6 +4,15 @@ body { background-color: #273e99; color: white; font-family: sans-serif; }
 /* Navbar */
 .navbar { display: flex; align-items: center; padding: 20px 50px; gap: 40px; background: #0f1014; }
 
+.user-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .logo {
     font-size: 27px;
     font-weight: bold;
@@ -40,37 +49,133 @@ button { padding: 10px 25px; cursor: pointer; border: none; font-weight: bold; b
     background-color: #1660ab;
 }
 
-/* Update these styles in your home.css */
-
 .search-box {
     display: flex;
     align-items: center;
-    /* Increased brightness: Using a lighter shade of gray/white */
-    background-color: rgba(255, 255, 255, 0.15); 
-    border-radius: 20px;
-    padding: 8px 18px;
-    /* Adding a subtle glow/border effect to make it pop */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 8px 14px;
 }
 
-/* Make the box even brighter when clicked */
 .search-box:focus-within {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
 }
 
 .search-input {
     background: transparent;
     border: none;
     outline: none;
-    /* Pure white text for maximum readability */
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 15px;
+    min-width: 140px;
     width: 220px;
 }
 
-/* Optional: Make the placeholder text brighter so it's easier to read */
 .search-input::placeholder {
     color: #d1d1d1;
+}
+
+.content h1 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.result-card {
+    position: relative;
+    min-height: 260px;
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.result-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.result-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px;
+    color: white;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.result-info h4 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.result-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #c8c8c8;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 8px 14px;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 12px;
+    }
+    .user-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+    .search-input {
+        width: 140px;
+    }
 }
