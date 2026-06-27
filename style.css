@@ -642,3 +642,234 @@ button { padding: 10px 25px; cursor: pointer; border: none; font-weight: bold; b
     color:#888;
     font-size:13px;
 }
+
+.profile-page{
+
+    background:#08111f;
+    font-family:'Poppins',sans-serif;
+    color:white;
+}
+
+.profile-container{
+
+    width:90%;
+    max-width:950px;
+
+    margin:40px auto;
+
+}
+
+.profile-banner{
+
+    height:180px;
+
+    background:linear-gradient(135deg,#0d47a1,#091520,#16243a);
+
+    border-radius:25px;
+}
+
+.profile-card{
+
+    text-align:center;
+
+    margin-top:-80px;
+
+}
+
+.profile-avatar{
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    border:6px solid #08111f;
+
+    object-fit:cover;
+}
+
+.profile-card h1{
+
+    margin-top:15px;
+
+    font-size:34px;
+}
+
+.profile-card p{
+
+    color:#a7b0c0;
+
+    margin:8px 0 20px;
+}
+
+.edit-btn{
+
+    padding:12px 30px;
+
+    border:none;
+
+    background:#1e88e5;
+
+    color:white;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.edit-btn:hover{
+
+    background:#1976d2;
+
+}
+
+.subscription-card{
+
+    margin-top:40px;
+
+    background:#141f33;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.subscription-card p{
+
+    color:#a9b4c8;
+
+    margin-top:8px;
+}
+
+.subscription-card button{
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-size:15px;
+}
+
+.profile-options{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+}
+
+.profile-options a{
+
+    text-decoration:none;
+
+    color:white;
+}
+
+.option{
+
+    background:#121b2d;
+
+    border-radius:18px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+}
+
+.option:hover{
+
+    background:#1d2b45;
+
+    transform:translateY(-8px);
+}
+
+.option span{
+
+    font-size:42px;
+
+    display:block;
+
+    margin-bottom:15px;
+}
+
+.option h3{
+
+    font-size:16px;
+
+    font-weight:500;
+}
+
+.logout-btn{
+
+    margin-top:40px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#e53935;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+
+    background:#c62828;
+}
+
+@media(max-width:700px){
+
+.subscription-card{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+}
+
+.profile-avatar{
+
+    width:130px;
+    height:130px;
+}
+
+.profile-card h1{
+
+    font-size:28px;
+}
+
+}
