@@ -873,3 +873,46 @@ button { padding: 10px 25px; cursor: pointer; border: none; font-weight: bold; b
 }
 
 }
+
+/* Back Button */
+
+.back-btn{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:0.3s;
+
+    z-index:1000;
+}
+
+.back-btn:hover{
+
+    background:#1e88e5;
+
+    transform:translateX(-3px);
+
+    box-shadow:0 0 15px rgba(30,136,229,0.5);
+
+}
