@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #273e99; color: white; font-family: sans-serif; }
+
+/* Navbar */
+.navbar { display: flex; align-items: center; padding: 20px 50px; gap: 40px; background: #0f1014; }
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #1f80e0;
+    letter-spacing: 5px;
+}
+.nav-links a, .user-actions a { color: white; text-decoration: none; margin-right: 20px; font-size: 14px; }
+/* Hero Section */
+.hero { height: 60vh; padding: 100px 50px; background: linear-gradient(to right, #0f1014, transparent); }
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero-buttons { margin-top: 20px; }
+button { padding: 10px 25px; cursor: pointer; border: none; font-weight: bold; border-radius: 4px; }
+.watch { background: white; color: black; margin-right: 10px; }
+.list { background: rgba(255, 255, 255, 0.2); color: white; }
+
+/* Rows */
+.content { padding: 20px 50px; }
+.poster-container { display: flex; gap: 15px; overflow-x: auto; padding-top: 15px; }
+.poster { min-width: 200px; height: 300px; background: #222; border-radius: 8px; transition: 0.3s; }
+.poster:hover { transform: scale(1.05); border: 2px solid white; cursor: pointer; }
+.profile-link {
+    background-color: #1f80e0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    white-space: nowrap; /* Prevents button breaking on small viewport widths */
+}
+
+.profile-link:hover {
+    background-color: #1660ab;
+}
+
+/* Update these styles in your home.css */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    /* Increased brightness: Using a lighter shade of gray/white */
+    background-color: rgba(255, 255, 255, 0.15); 
+    border-radius: 20px;
+    padding: 8px 18px;
+    /* Adding a subtle glow/border effect to make it pop */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Make the box even brighter when clicked */
+.search-box:focus-within {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    /* Pure white text for maximum readability */
+    color: #ffffff; 
+    font-size: 15px;
+    width: 220px;
+}
+
+/* Optional: Make the placeholder text brighter so it's easier to read */
+.search-input::placeholder {
+    color: #d1d1d1;
+}
